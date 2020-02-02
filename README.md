@@ -9,6 +9,12 @@ Just a small library for having a better life as an Android Developer
 * Requires activity to be a subtype of AppCompatActivity 
 
 ```kotlin
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import de.maaxgr.architecturecompoenentutilities.activityBinding
+import de.maaxgr.architecturecompoenentutilities.enable
+import de.maaxgr.architecturecomponentslibrary.databinding.ActivityMainBinding
+
 class MainActivity : AppCompatActivity() {
 
     //define dataBinding variable with delegate
