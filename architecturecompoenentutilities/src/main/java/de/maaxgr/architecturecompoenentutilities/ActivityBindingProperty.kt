@@ -2,7 +2,6 @@ package de.maaxgr.architecturecompoenentutilities
 
 import android.app.Activity
 import androidx.annotation.LayoutRes
-import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import kotlin.properties.ReadOnlyProperty
