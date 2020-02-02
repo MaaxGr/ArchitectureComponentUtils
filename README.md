@@ -2,6 +2,27 @@
 
 Just a small library for having a better life as an Android Developer
 
+# How to use the library?
+
+1. Add jitpack to repositories
+```kotlin
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+2. add library to dependencies
+```kotlin
+dependencies {
+    ...
+    implementation "com.github.MaaxGr:ArchitectureComponentUtils:1.0.0"
+}
+```
+
+
 # Features?
 
 ## No lateinit for DataBinding in activities any more
@@ -27,4 +48,4 @@ class MainActivity : AppCompatActivity() {
         dataBinding.enable(this)
     }
 }
-``` 
+```
