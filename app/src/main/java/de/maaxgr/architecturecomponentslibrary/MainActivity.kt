@@ -17,12 +17,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(sis)
 
         viewModel.enable(this)
-        dataBinding.enable(this)
+        //dataBinding.enablee(this)
         dataBinding.viewModel = viewModel
 
         viewModel.data.observe(this) {
             println("Observed value: $it")
         }
+
+        this.d()
+
+    }
+
+    fun d() {
+
     }
 
 }

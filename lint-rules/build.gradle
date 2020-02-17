@@ -1,0 +1,25 @@
+apply plugin: 'java-library'
+apply plugin: "kotlin"
+
+dependencies {
+    compileOnly "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    compileOnly "com.android.tools.lint:lint:26.5.3"
+    compileOnly "com.android.tools.lint:lint-api:26.5.3"
+    compileOnly "com.android.tools.lint:lint-checks:26.5.3"
+
+    testImplementation "com.android.tools.lint:lint-tests:26.5.3"
+}
+
+
+
+jar {
+    baseName 'de.maaxgr.architecturecomponentutils'
+    version '1.0'
+
+    manifest {
+        attributes 'Manifest-Version': 1.0
+        attributes('Lint-Registry-v2': 'de.maaxgr.architecturecomponentutils.lintrules.IssueRegistry')
+    }
+}
+
