@@ -1,4 +1,4 @@
 rootProject.name='ArchitectureComponentsLibrary'
 include ':app'
 include ':architecturecompoenentutilities'
-include 'lint-rules'
+include ':lint-rules'
