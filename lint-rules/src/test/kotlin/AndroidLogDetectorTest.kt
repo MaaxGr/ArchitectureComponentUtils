@@ -1,11 +1,7 @@
-import com.android.testutils.TestUtils
 import com.android.tools.lint.checks.infrastructure.LintDetectorTest
-import com.android.tools.lint.checks.infrastructure.TestLintTask
 import com.android.tools.lint.detector.api.Detector
 import com.android.tools.lint.detector.api.Issue
-import de.maaxgr.architecturecomponentutils.lintrules.detectors.AndroidLogDetector
 import org.junit.Test
-import java.io.File
 
 class AndroidLogDetectorTest : LintDetectorTest() {
 

@@ -6,7 +6,7 @@ import org.jetbrains.uast.UClass
 import org.jetbrains.uast.UElement
 import java.util.*
 
-class ActivityBindingEnabledDetector : Detector(), SourceCodeScanner {
+class ActivityViewModelEnabledDetector : Detector(), SourceCodeScanner {
 
     override fun getApplicableUastTypes() = listOf(UClass::class.java)
 
@@ -19,7 +19,7 @@ class ActivityBindingEnabledDetector : Detector(), SourceCodeScanner {
             val delegateField = node.fields
                 .firstOrNull {
                     it.name.endsWith("\$delegate")
-                            && it.type.toString() == "PsiType:ActivityBindingProperty"
+                            && it.type.toString() == "PsiType:ActivityViewModelProperty"
                 } ?: return
 
             val variableName = delegateField.name.removeSuffix("\$delegate")
@@ -40,16 +40,16 @@ class ActivityBindingEnabledDetector : Detector(), SourceCodeScanner {
 
     companion object {
         private val IMPLEMENTATION = Implementation(
-            ActivityBindingEnabledDetector::class.java,
+            ActivityViewModelEnabledDetector::class.java,
             EnumSet.of(Scope.JAVA_FILE)
         )
 
         val ISSUE: Issue = Issue
             .create(
-                id = "ActivityBindingEnabledDetector",
-                briefDescription = "activity-binding enable() detector",
+                id = "ActivityViewModelEnabledDetector",
+                briefDescription = "activity-viewmodel enable() detector",
                 explanation = """
-                checks whether binding.enable() is called in onCreate().
+                checks whether viewmodel.enable() is called in onCreate().
             """.trimIndent(),
                 category = Category.CORRECTNESS,
                 priority = 9,

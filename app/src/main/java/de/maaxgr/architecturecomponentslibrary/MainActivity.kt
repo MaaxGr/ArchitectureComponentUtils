@@ -10,14 +10,14 @@ import de.maaxgr.architecturecomponentslibrary.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private val dataBinding by activityBinding<ActivityMainBinding>(R.layout.activity_main)
-    private val viewModel by activityViewModel(MainActivityViewModel::class)
+    val dataBinding by activityBinding<ActivityMainBinding>(R.layout.activity_main)
+    val viewModel by activityViewModel(MainActivityViewModel::class)
 
     override fun onCreate(sis: Bundle?) {
         super.onCreate(sis)
 
         viewModel.enable(this)
-        //dataBinding.enablee(this)
+        dataBinding.enable(this)
         dataBinding.viewModel = viewModel
 
         viewModel.data.observe(this) {
