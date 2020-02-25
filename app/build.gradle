@@ -42,4 +42,5 @@ dependencies {
     implementation project(":architecturecompoenentutilities")
 
     lintChecks project(path: ':lint-rules')
+    lintPublish project(':lint-rules')
 }
