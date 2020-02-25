@@ -37,4 +37,5 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
 
     lintChecks project(path: ':lint-rules')
+    lintPublish project(':lint-rules')
 }
